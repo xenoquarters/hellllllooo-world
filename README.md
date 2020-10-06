@@ -6,8 +6,8 @@ main files:
 main_code.py
 
 tester code files:
-testing.py
+testing_code.py
 
 text files (to store the valuable information):
 booklist.txt
-testing.txt
+testing_file.txt

@@ -10,21 +10,19 @@ import threading
 
 def add_books():
     borrowed = open("booklist.txt", "a+")
-    modus = False
-    while not modus:
+
+    while True:
         include_book = input("Enter a book name: ")
         if include_book.lower() == "quit":
             break
-        while True:
-            borrowed_state = input("Has it been borrowed? ")
-            if borrowed_state.lower() == "yes":
-                borrowed_state = True
-                break
-            elif borrowed_state.lower() == "no":
-                borrowed_state = False
-                break
-            else:
-                continue
+
+        borrowed_state = input("Has it been borrowed? ")
+
+        while borrowed_state.lower() not in ["yes", "no"]:
+            borrowed_state = input("Has it been borrowed? (yes/no) ")
+        
+        borrowed_state == True if borrowed_state.lower() == "yes" else False
+                      
         borrowed.write(f"{include_book}: {str(borrowed_state)}\n")
         borrowed.flush()
 

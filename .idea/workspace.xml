@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a0f8b1c-574c-4d45-813c-4af2f34c6523" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iXChhMdn9Qeh61OvmeReUZKu9i" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hellllllooo-world" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_code.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main_code" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a0f8b1c-574c-4d45-813c-4af2f34c6523" name="Default Changelist" comment="" />
+      <created>1602044677027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602044677027</updated>
+    </task>
+    <task id="LOCAL-00001" summary="changed a bit of the logic and removed threading">
+      <created>1602047079503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602047079503</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed a bit of the logic and removed threading" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed a bit of the logic and removed threading" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="572" y="92" key="CommitChangelistDialog2" timestamp="1602047078798">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state x="572" y="92" key="CommitChangelistDialog2/0.23.1920.987@0.23.1920.987" timestamp="1602047078798" />
+    <state width="1920" height="274" key="GridCell.Tab.0.bottom" timestamp="1602047095234">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state width="1920" height="274" key="GridCell.Tab.0.bottom/0.23.1920.987@0.23.1920.987" timestamp="1602047095234" />
+    <state width="1920" height="274" key="GridCell.Tab.0.center" timestamp="1602047095233">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state width="1920" height="274" key="GridCell.Tab.0.center/0.23.1920.987@0.23.1920.987" timestamp="1602047095233" />
+    <state width="1920" height="274" key="GridCell.Tab.0.left" timestamp="1602047095232">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state width="1920" height="274" key="GridCell.Tab.0.left/0.23.1920.987@0.23.1920.987" timestamp="1602047095232" />
+    <state width="1920" height="274" key="GridCell.Tab.0.right" timestamp="1602047095234">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state width="1920" height="274" key="GridCell.Tab.0.right/0.23.1920.987@0.23.1920.987" timestamp="1602047095234" />
+    <state x="763" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602047013175">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state x="763" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.987@0.23.1920.987" timestamp="1602047013175" />
+  </component>
+</project>

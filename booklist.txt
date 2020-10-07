@@ -1,0 +1,15 @@
+xinmin: True
+sucks: False
+chinese book: True
+english book: False
+math: True
+physics 14th edition: False
+calendar: False
+jbl whatever thing: True
+water: True
+a very long book name just to test if my code works: True
+ciyu shouce: False
+Hey: no
+no: yes
+you mother's purse: yes
+no: no

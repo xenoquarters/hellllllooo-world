@@ -28,7 +28,7 @@ def add_books():
 
 def getList():
     readable_list = open("booklist.txt", "r")
-    print("Here are the list of books: ")
+    print("\nHere are the list of books: ")
     print(readable_list.read())
 
 def timeout():
@@ -72,20 +72,32 @@ def availability():
         if boolean is None:
             print("There are no records of the book.")
 
-def __main__(user):
-    if user.lower() == "add books":
+def main(task):
+    if task == "0":
         add_books()
-    elif user.lower() == "get booklist":
+    elif task == "1":
         getList()
-    elif user.lower() == "check availability":
+    elif task == "2":
         availability()
     else:
         print("No such function yet.")
 
-__main__(input("What do you want to do today? "))
+menu = ("hellllllooo-world:\n"
+        "----------------------------------------\n"
+        "Main Menu\n"
+        "----------------------------------------\n"
+        "[0] Add Books\n"
+        "[1] Get Booklist\n"
+        "[2] Check Availability\n"
+
+        "What do you want to do today? "
+)
+
+main(input(menu))
+
 while True:
     ask = input("Do you want to continue? ")
     if ask == "yes":
-        __main__(input("What do you want to do today? "))
+        main(input(menu))
     else:
         break

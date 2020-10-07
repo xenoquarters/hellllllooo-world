@@ -12,3 +12,4 @@ ciyu shouce: False
 Hey: no
 no: yes
 you mother's purse: yes
+no: no

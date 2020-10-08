@@ -14,8 +14,8 @@ def add_books():
     borrowed = open("booklist.txt", "a+")
 
     while True:
-        include_book = input("Enter a book name: ")
-        if include_book.lower() == "quit":
+        book = input("Enter a book name: ")
+        if book.lower() == "quit":
             break
 
         borrowed_state = input("Has it been borrowed? ")
@@ -26,15 +26,13 @@ def add_books():
         # double == makes the True/False ineffective
         borrowed_state = True if borrowed_state.lower() == "yes" else False
 
-        borrowed.write(f"{include_book}: {str(borrowed_state)}\n")
+        borrowed.write(f"{book}: {str(borrowed_state)}\n")
         borrowed.flush()
-
 
 def getList():
     readable_list = open("booklist.txt", "r")
     print("\nHere are the list of books: ")
     print(readable_list.read())
-
 
 # def timeout():
 #     start = timer()
@@ -46,37 +44,30 @@ def getList():
 #             pass
 #         availability()
 
-
 def availability():
     # time_format = "%(asctime)s: %(message)s"
     # logging.basicConfig(format=time_format, level=logging.INFO, datefmt="%H:%M:%S")
     # logging.info("Ten seconds in, there will be a prompt for a booklist.")
     # avil_start = threading.Thread(target=timeout)
     # avil_start.start()
-    available = input("What book are you finding for? ")
-    with open("booklist.txt") as check_availability:
-        for num, line in enumerate(check_availability):
-            temp = line.split()
-            while True:
-                if ":" not in temp[0]:
-                    more_temp = temp[0] + " " + temp[1]
-                    temp.pop(0)
-                    temp.pop(0)
-                    temp.insert(0, more_temp)
-                else:
-                    break
-            if available in temp[0]:
-                boolean = temp[1]
-                if boolean == "True":
-                    print("Available!")
-                    break
-                else:
-                    print("Not available.")
-                    break
-            else:
-                boolean = None
-        if boolean is None:
-            print("There are no records of the book.")
+
+    query = input("What book are you finding for? ")
+
+    booklist = open("booklist.txt").readlines()
+    for book in booklist:
+        x = book.rsplit(maxsplit=1)
+        book_name = x[0][:-1]
+        book_available = x[1] == "True"
+
+        if book_name == query:
+            if book_available:
+                print("Available!")
+                return
+            else: 
+                print("Not Available")
+                return
+  
+    print("There are no records of the book.")
 
 
 def main(task):
@@ -104,8 +95,9 @@ menu = ("hellllllooo-world:\n"
 main(input(menu))
 
 while True:
-    ask = input("Do you want to continue? ")
-    if ask == "yes":
+    ask = input("Do you want to continue? (yes/no) ")
+
+    if ask == "yes" or ask == "y":
         main(input(menu))
-    else:
+    elif ask == "no" or ask == "n":
         break

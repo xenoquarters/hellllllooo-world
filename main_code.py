@@ -1,6 +1,7 @@
 from timeit import default_timer as timer
 import logging
 import threading
+import numpy as np
 
 
 # test_file = open("testing_file.txt", "a")
@@ -14,7 +15,7 @@ def add_books():
     borrowed = open("booklist.txt", "a+")
 
     while True:
-        book = input("Enter a book name: ")
+        book = input("Enter a book name (Type 'Quit' to stop): ")
         if book.lower() == "quit":
             break
 
@@ -30,9 +31,14 @@ def add_books():
         borrowed.flush()
 
 def getList():
-    readable_list = open("booklist.txt", "r")
+    booklist = open("booklist.txt", "r").readlines()
+    booklist = np.array([[x.split(":")[0],x.strip().split(":")[1]] for x in booklist])
+    
+    align = max(map(len, booklist[:,0])) + 10
     print("\nHere are the list of books: ")
-    print(readable_list.read())
+    print("Book", "Borrowed".rjust(align-4))
+    for book in booklist:
+        print(book[0], book[1].rjust(align-len(book[0])))
 
 # def timeout():
 #     start = timer()

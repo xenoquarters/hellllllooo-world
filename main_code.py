@@ -12,7 +12,7 @@ import numpy as np
 # print(read.read())
 
 def add_books():
-    borrowed = open("booklist.txt", "a+")
+    borrowed = open("list/booklist.txt", "a+")
 
     while True:
         book = input("Enter a book name (Type 'Quit' to stop): ")
@@ -31,7 +31,7 @@ def add_books():
         borrowed.flush()
 
 def getList():
-    booklist = open("booklist.txt", "r").readlines()
+    booklist = open("list/booklist.txt", "r").readlines()
     booklist = np.array([[x.split(":")[0],x.strip().split(":")[1]] for x in booklist])
     
     align = max(map(len, booklist[:,0])) + 10
@@ -59,7 +59,7 @@ def availability():
 
     query = input("What book are you finding for? ")
 
-    booklist = open("booklist.txt").readlines()
+    booklist = open("list/booklist.txt").readlines()
     for book in booklist:
         x = book.rsplit(maxsplit=1)
         book_name = x[0][:-1]

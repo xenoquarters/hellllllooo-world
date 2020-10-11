@@ -12,7 +12,7 @@ python -m hellllllooo-world
 Do not touch the "git" folder
 
 Booklists and test lists are at the "data" folder
-- the name of the main booklist should be "booklist.txt"
+- the name of the main booklist should be "booklist.csv"
 
 Test programs are at separate user folders
 

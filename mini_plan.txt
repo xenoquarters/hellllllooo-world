@@ -1,6 +1,6 @@
 main_code:
 
-Fuctions:
+Functions:
 add_books()
 getList()
 availability()

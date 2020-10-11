@@ -1,6 +1,6 @@
-import numpy as np
+import numpy as np  # are we using this
 import pandas as pd
-import os
+import os  # and this
 
 
 def add_books(booklist):
@@ -24,14 +24,16 @@ def add_books(booklist):
 
         if cont.lower() in ["no", "n"]:
             break
- 
+
     new_book = pd.DataFrame(books, columns=["Book", "Borrowed", "Price"])
     booklist = booklist.append(new_book, sort=False)
-    booklist.to_csv(PATH, index=False)
-    
+    booklist.to_csv(DIVERTED_PATH, index=False)
+
+
 def getList(booklist):
     pd.set_option('display.max_rows', 1000)
     print(booklist)
+
 
 def availability(booklist):
     available = booklist.loc[booklist["Borrowed"] == False, ["Book", "Price"]]
@@ -52,7 +54,7 @@ def main(path):
     option = input(menu)
     if option == "":
         return
-    while option.isdigit() != True:
+    while not option.isdigit():
         option = input("What do you want to do today?: ")
 
     option = int(option)
@@ -68,12 +70,28 @@ def main(path):
     else:
         print("Function not available yet")
 
+
 PATH = "hellllllooo-world/data/booklist.csv"
-main(PATH)
+
+
+def path_select():
+    global DIVERTED_PATH
+    DIVERTED_PATH = ""
+    user_query = input("Who is accessing the system? ")
+    if user_query.lower() in ["easton", "east"]:
+        DIVERTED_PATH = "/Users/louisandeaston/Documents/GitHub/" + PATH
+    elif user_query.lower() in ["eugenio", "egg"]:
+        DIVERTED_PATH = PATH
+    else:
+        DIVERTED_PATH = PATH
+    return DIVERTED_PATH
+
+
+main(path_select())
 while True:
     ask = input("Do you want to continue? (yes/no) ")
 
     if ask == "yes" or ask == "y":
-        main(PATH)
+        main(DIVERTED_PATH)
     else:
         break

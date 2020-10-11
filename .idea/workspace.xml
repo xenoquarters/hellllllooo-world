@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a0f8b1c-574c-4d45-813c-4af2f34c6523" name="Default Changelist" comment="" />
+    <list default="true" id="8a0f8b1c-574c-4d45-813c-4af2f34c6523" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/hellllllooo-world.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hellllllooo-world.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_code.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +22,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="main_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -94,6 +101,10 @@
       <screen x="0" y="23" width="1920" height="987" />
     </state>
     <state width="1920" height="274" key="GridCell.Tab.0.right/0.23.1920.987@0.23.1920.987" timestamp="1602047095234" />
+    <state x="469" y="155" key="SettingsEditor" timestamp="1602335791768">
+      <screen x="0" y="23" width="1920" height="987" />
+    </state>
+    <state x="469" y="155" key="SettingsEditor/0.23.1920.987@0.23.1920.987" timestamp="1602335791768" />
     <state x="763" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602047013175">
       <screen x="0" y="23" width="1920" height="987" />
     </state>

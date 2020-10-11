@@ -1,5 +1,5 @@
 import time
-from math import *
+from math import trunc
 import logging
 import threading
 

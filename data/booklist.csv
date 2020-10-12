@@ -1,22 +1,25 @@
 Book,Borrowed,Price
-xinmin,True,0
-sucks,False,0
-chinese book,True,0
-english book,False,0
-math,True,0
-physics 14th edition,False,0
-calendar,False,0
-jbl whatever thing,True,0
-water,True,0
-a very long book name just to test if my code works,True,0
-more chinese books,False,0
-Hey,False,0
-no,True,0
-you mother's purse,True,0
-no u,False,0
-eat stuff,True,0
-ahhhhhhh,False,0
-collab test,True,0
-add_book() test 1,True,0
-add_book() test 2,False,0
-testing 123,True,3.50
+xinmin,True,0.0
+sucks,False,0.0
+chinese book,True,0.0
+english book,False,0.0
+math,True,0.0
+physics 14th edition,False,0.0
+calendar,False,0.0
+jbl whatever thing,True,0.0
+water,True,0.0
+a very long book name just to test if my code works,True,0.0
+more chinese books,False,0.0
+Hey,False,0.0
+no,True,0.0
+you mother's purse,True,0.0
+no u,False,0.0
+eat stuff,True,0.0
+ahhhhhhh,False,0.0
+collab test,True,0.0
+add_book() test 1,True,0.0
+add_book() test 2,False,0.0
+testing 123,True,3.5
+your,True,10.67
+mom,False,0.30
+test1,True,10

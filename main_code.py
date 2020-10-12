@@ -2,6 +2,8 @@ import numpy as np  # are we using this
 import pandas as pd
 import os  # and this
 
+# we'll use them once sepPrice and getPrice are set
+
 
 def add_books(booklist):
     books = []
@@ -27,7 +29,7 @@ def add_books(booklist):
 
     new_book = pd.DataFrame(books, columns=["Book", "Borrowed", "Price"])
     booklist = booklist.append(new_book, sort=False)
-    booklist.to_csv(DIVERTED_PATH, index=False)
+    booklist.to_csv(BOOKLIST_PATH, index=False)
 
 
 def getList(booklist):
@@ -71,27 +73,34 @@ def main(path):
         print("Function not available yet")
 
 
-PATH = "hellllllooo-world/data/booklist.csv"
+RELATIVE_PATH = "hellllllooo-world/data/booklist.csv"
 
 
 def path_select():
-    global DIVERTED_PATH
-    DIVERTED_PATH = ""
+    path = ""
+
     user_query = input("Who is accessing the system? ")
+
+    while user_query not in ["easton", "east", "eugenio", "egg"]:
+        user_query = input("Who is accessing the system? ")
+      
+    
     if user_query.lower() in ["easton", "east"]:
-        DIVERTED_PATH = "/Users/louisandeaston/Documents/GitHub/" + PATH
+        path = "/Users/louisandeaston/Documents/GitHub/" + RELATIVE_PATH
+
     elif user_query.lower() in ["eugenio", "egg"]:
-        DIVERTED_PATH = PATH
-    else:
-        DIVERTED_PATH = PATH
-    return DIVERTED_PATH
+        path = "C:/Users/Egie/Desktop/Projects/SonrisaProjects/" + RELATIVE_PATH
 
+    return path
 
-main(path_select())
+BOOKLIST_PATH = path_select()
+
+main(BOOKLIST_PATH)
+
 while True:
     ask = input("Do you want to continue? (yes/no) ")
 
     if ask == "yes" or ask == "y":
-        main(DIVERTED_PATH)
+        main(BOOKLIST_PATH)
     else:
         break

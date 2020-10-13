@@ -1,6 +1,6 @@
-import numpy as np  # are we using this
+import numpy as np
 import pandas as pd
-import os, sys  # and this
+import os, sys
 import socket
 import threading
 import pickle

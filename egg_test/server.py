@@ -61,55 +61,58 @@ def availability(booklist):
 
 def client_handler(conn, addr):
     print(f"Connected to {addr}")
-    query = conn.recv(12).decode("utf-8")
-    print(f"Query: {query}")
 
-    if query == "0":
+    try:
+        while True:
+            query = conn.recv(12).decode("utf-8")
+            print(f"Query: {query}")
+            if query == "0":
 
-        book_data_length = conn.recv(1024).decode("utf-8")
-        book_data = conn.recv(int(book_data_length))
+                book_data_length = conn.recv(1024).decode("utf-8")
+                book_data = conn.recv(int(book_data_length))
 
-        book_data = pickle.loads(book_data)
+                book_data = pickle.loads(book_data)
 
-        print(book_data)
+                print(book_data)
 
-        add_book(BOOKLIST, BOOKLIST_PATH, book_data[0], book_data[1], book_data[2])
+                add_book(BOOKLIST, BOOKLIST_PATH, book_data[0], book_data[1], book_data[2])
 
-        send_data = pickle.dumps(f"Book {book_data[0]} successfully added.")
-        send_length = bytes(f"{len(send_data)}", "utf-8")
+                send_data = pickle.dumps(f"Book {book_data[0]} successfully added.")
+                send_length = bytes(f"{len(send_data)}", "utf-8")
 
-        conn.send(send_length)
-        sleep(1)
-        conn.send(send_data)
+                conn.send(send_length)
+                sleep(1)
+                conn.send(send_data)
 
-    elif query == "1":
-        l = getList(BOOKLIST)
-        
-        send_data = pickle.dumps(f"Booklist:\n{l}")
-        send_length = bytes(f"{len(send_data)}", "utf-8")
+            elif query == "1":
+                l = getList(BOOKLIST)
+                
+                send_data = pickle.dumps(f"Booklist:\n{l}")
+                send_length = bytes(f"{len(send_data)}", "utf-8")
 
-        conn.send(send_length)
-        sleep(1)
-        conn.send(send_data)
+                conn.send(send_length)
+                sleep(1)
+                conn.send(send_data)
 
-    elif query == "2":
-        l = availability(BOOKLIST)
-        
-        send_data = pickle.dumps(f"Available books:\n{l}")
-        send_length = bytes(f"{len(send_data)}", "utf-8")
+            elif query == "2":
+                l = availability(BOOKLIST)
+                
+                send_data = pickle.dumps(f"Available books:\n{l}")
+                send_length = bytes(f"{len(send_data)}", "utf-8")
 
-        conn.send(send_length)
-        sleep(1)
-        conn.send(send_data)
+                conn.send(send_length)
+                sleep(1)
+                conn.send(send_data)
 
-    else:
-        send_data = pickle.dumps("Function not available")
-        send_length = bytes(f"{len(send_data)}", "utf-8")
+            else:
+                send_data = pickle.dumps("Function not available")
+                send_length = bytes(f"{len(send_data)}", "utf-8")
 
-        conn.send(send_length)
-        sleep(1)
-        conn.send(send_data) 
-
+                conn.send(send_length)
+                sleep(1)
+                conn.send(send_data) 
+    except:
+        print("Disconnected")
     
 
 BOOKLIST = pd.read_csv(BOOKLIST_PATH)

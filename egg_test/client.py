@@ -24,8 +24,6 @@ menu = ("----------------------------------------\n"
             )
 
 def main():
-    client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
-    client.connect(ADDR)
 
     query = input(menu)
 
@@ -63,6 +61,14 @@ def main():
     recv_data = pickle.loads(recv_data)
     print(recv_data)
 
-main()
+client = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
+client.connect(ADDR)
+
+while True:
+    main()
+    x = input("Continue?: ")
+
+    if x == "n":
+        break
 
 

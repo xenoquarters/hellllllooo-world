@@ -3,7 +3,7 @@ import pandas as pd
 import os  # and this
 
 # we'll use them once sepPrice and getPrice are set
-
+#lol
 
 def add_books(booklist):
     books = []
@@ -83,8 +83,8 @@ def path_select():
 
     while user_query not in ["easton", "east", "eugenio", "egg"]:
         user_query = input("Who is accessing the system? ")
-      
-    
+
+
     if user_query.lower() in ["easton", "east"]:
         path = "/Users/louisandeaston/Documents/GitHub/" + RELATIVE_PATH
 
